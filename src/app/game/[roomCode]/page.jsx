@@ -32,8 +32,7 @@ export default function GameRoom({ params, searchParams }) {
   const [playerId, setPlayerId] = useState(null);
 
   useEffect(() => {
-    socket = io('http://localhost:3001')
-
+    socket = io('https://death-back.onrender.com')
     // Connect to room
     if (params.roomCode) {
       if (searchParams.create) {
